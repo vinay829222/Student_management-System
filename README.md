@@ -39,13 +39,13 @@ The project follows Django’s **MVT (Model–View–Template)** architecture an
 ## 🖼️ Screenshots
 
 ### Login Page
-![Login Page](screenshots/Login.png)
+![Login Page](std/screenshots/Login.png)
 
 ### Add Student Page
-![Add Student](screenshots/Register.png)
+![Add Student](std/screenshots/Register.png)
 
 ### Home Page (Dashboard)
-![Home Page](screenshots/Homepage.png)
+![Home Page](std/screenshots/Homepage.png)
 
 ---
 
@@ -132,3 +132,4 @@ http://127.0.0.1:8000/
 
 ## 📄 License
 This project is created for educational purposes.
+
