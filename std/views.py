@@ -96,7 +96,7 @@ def logout_page(request):
     logout(request)
     return redirect("login_page")
 
-@login_required(login_url="login_page")
+
 def register(request):
     if request.method=="POST":
         first_name=request.POST.get("first_name")
