@@ -1,0 +1,46 @@
+{% extends "std/base.html" %}
+
+{% block start %}
+  {% include "std/navbar.html" %}
+
+  
+
+<h1 class="text-center my-3">Student Management</h1>
+<h1 class="text-center my-3">List of Student</h1>
+<div class="container">
+    <div class="col-md-12 card shadow p-4">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>SNo</th>
+                    <th>Roll</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for s in std %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{s.roll}}</td>
+                    <td>{{s.name}}</td>
+                    <td>{{s.email}}</td>
+                    <td>{{s.address}}</td>
+                    <td>{{s.phone}}</td>
+                    <td>
+                        <a href="{% url 'delete_page' s.roll %}" class="btn btn-danger md-sm">Delete</a>
+                        <a href="{% url 'update_page' s.roll %}" class="btn btn-success md-sm">Update</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+
+{% endblock  %}

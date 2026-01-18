@@ -1,0 +1,72 @@
+{% extends "std/base.html" %} {% block start %} {% include "std/navbar.html" %}
+<h1 class="text-center my-3">Add New Students</h1>
+
+<div class="container ">
+  <div class="col-6 mx-auto card shadow p-4 ">
+    
+      <form Action="#" method="POST">
+       {% csrf_token %}
+        <div class="mb-3">
+          <label for="rollnumber" class="form-label"
+            >Roll Number</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="rollnumber"
+            placeholder="Enter Your Roll"
+            name="roll"
+            required
+            
+          />
+          
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Enter Your Name"
+            name="name"
+            required
+
+          />
+        </div>
+        <div class="mb-3">
+            <label for="Email" class="form-label">Email</label>
+            <input type="Email" class="form-control" 
+            id="Email"
+            placeholder="Enter Your Email id"
+            name="email"
+            required
+  />
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <textarea  id="address" class="form-control"
+            placeholder="Enter Your Address"
+            name="address"
+            required
+
+></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="number" class="form-control" id="phone" 
+            placeholder="Enter Your Phone number"
+            name="phone"
+            maxlength="10"
+            pattern="{0-9}[10]"
+            title="Enter 10 digit phone Number"
+            required
+/>
+        </div>
+        <div class="text-center">
+        <button type="submit" class="btn btn-primary  ">Submit</button>
+        </div>
+      </form>
+    
+  </div>
+</div>
+{% endblock %}
